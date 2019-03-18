@@ -1,15 +1,106 @@
-/*
-  DIAGNOSTIC STYLING
-*/
-/* body {
-  background: gray;
+/* layout styling */
+* {
+  box-sizing: border-box;
 }
 
-* {
-  outline: 1px dotted black;
-} */
+body {
+  margin: 0px;
+  font-family:'adso regular', sans-serif;
+}
 
-/* Portfolio Styling */
+/* Navbar */
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-logo {
+  display: inline-block;
+  padding: 15px 15px 15px 15px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 18px 15px 18px 15px;
+  text-decoration: none;
+  color: #F58B6F;
+}
+
+.nav > .nav-links > a:hover {
+  background-color:#8ACDA4;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover {
+    background-color:#8ACDA4;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #F58B6F;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color:white;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) + .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked + .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+.nav-logo {
+  max-width:10%;
+ margin:10px;
+}
+
+/* Light Gallery */
 .lg-backdrop.in {
   background-color:white;
 }
