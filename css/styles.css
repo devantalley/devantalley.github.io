@@ -273,6 +273,7 @@ font-family: 'Courier New', Courier, monospace;
   border: solid 5px #F58B6F;
 }
 p {
+  min-width:350px;
   max-width:550px;
   line-height:1.9;
   padding:5px;
