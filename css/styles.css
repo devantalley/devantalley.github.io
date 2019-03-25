@@ -1,15 +1,8 @@
-/*
-  DIAGNOSTIC STYLING
-*/
-body {
-  background: gray;
-}
+/* DIAGNOSTIC STYLING */
 
-* {
-  outline: 1px dotted black;
-}
 
 /* Navbar */
+
 * {
   box-sizing: border-box;
 }
@@ -61,7 +54,10 @@ body {
 .nav > #nav-check {
   display: none;
 }
-
+.nav-logo {
+max-width:10%;
+margin:10px;
+}
 @media (max-width:600px) {
   .nav > .nav-btn {
     display: inline-block;
