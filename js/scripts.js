@@ -1,18 +1,18 @@
 // Everything OK?
 console.log('OK');
 
-// Your Awesome Scripts
-
-// Light Gallery
-$('#gallery-1').lightGallery({
-    thumbnail: false,
-    share: false,
-    mode: 'lg-tube'
+// animation
+let spans = document.querySelectorAll('.word span');
+spans.forEach((span, idx) => {
+	span.addEventListener('click', (e) => {
+		e.target.classList.add('active');
+	});
+	span.addEventListener('animationend', (e) => {
+		e.target.classList.remove('active');
+	});
+	
+	// Initial animation
+	setTimeout(() => {
+		span.classList.add('active');
+	}, 750 * (idx+1))
 });
-
-$('#gallery-2').lightGallery({
-    share:false,
-    download:false,
-    mode: 'lg-scale-up'
-});
-

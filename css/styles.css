@@ -1,18 +1,15 @@
 /* DIAGNOSTIC STYLING */
-
+body {
+  font-family: 'Courier New', Courier, monospace
+}
 
 /* Navbar */
 
 * {
   box-sizing: border-box;
 }
-
-body {
-  margin: 0px;
-  font-family: 'segoe ui';
-}
-
 .nav {
+  font-family: 'Courier New', Courier, monospace
   height: 50px;
   width: 100%;
   background-color: white;
@@ -26,7 +23,7 @@ body {
 .nav > .nav-header > .nav-logo {
   display: inline-block;
   font-size: 22px;
-  color: red;
+  color:#8acda4
   padding: 10px 10px 10px 10px;
 }
 
@@ -102,4 +99,167 @@ margin:10px;
     height: calc(100vh - 50px);
     overflow-y: auto;
   }
+}
+/*  animations */
+
+.word {
+  font-family: 'Courier New', Courier, monospace
+	perspective: 1000px; 
+	perspective-origin: 200px 40px;
+}
+
+.word span {
+	cursor: pointer;
+	display: inline-block;
+	font-size: 5em;
+	user-select: none;
+	line-height: .8;
+}
+
+.word span:nth-child(1).active {
+	animation: balance 1.5s ease-out;
+	transform-origin: 0% 100% 0px;
+}
+
+@keyframes balance {
+	0%, 100% {
+		transform: rotate(0deg);
+	}
+	
+	30%, 60% {
+		transform: rotate(-45deg);
+	}
+}
+
+.word span:nth-child(2).active {
+	animation: shrinkjump 1s ease-in-out;
+	transform-origin: bottom center;
+}
+
+@keyframes shrinkjump {
+	10%, 35% {
+		transform: scale(2, .2) translate(0, 0);
+	}
+	
+	45%, 50% {
+		transform: scale(1) translate(0, -150px);
+	}
+	
+	80% {
+		transform: scale(1) translate(0, 0);
+	}
+}
+
+.word span:nth-child(3).active {
+	animation: falling 2s ease-out;
+	transform-origin: bottom center;
+}
+
+@keyframes falling {
+	12% {
+		transform: rotateX(240deg);
+	}
+	
+	24% {
+		transform: rotateX(150deg);
+	}
+	
+	36% {
+		transform: rotateX(200deg);
+	}
+	
+	48% {
+		transform: rotateX(175deg);
+	}
+	
+	60%, 85% {
+		transform: rotateX(180deg);
+	}
+	
+	100% {
+		transform: rotateX(0deg);
+	}
+}
+
+.word span:nth-child(4).active {
+	animation: rotate 1s ease-out;
+}
+
+@keyframes rotate {
+	20%, 80% {
+		transform: rotateY(180deg);
+	}
+	
+	100% {
+		transform: rotateY(360deg);
+	}
+}
+
+.word span:nth-child(5).active {
+	animation: toplong 1.5s linear;
+}
+
+@keyframes toplong {
+	10%, 40% {
+		transform: translateY(-48vh) scaleY(1);
+	}
+	
+	90% {
+		transform: translateY(-48vh) scaleY(4);
+	}
+}
+
+/* Other styles */
+.name {
+	background-color: #8acda4;
+	color: #fff;
+	display: flex;
+	font-family: 'Courier New', Courier, monospace
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	height: 100vh;
+	margin: 0;
+}
+/* button */
+.button {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  background-color:white; 
+  color:#8acda4;
+  font-family: 'Courier New', Courier, monospace
+  font-size: 15px;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15px;
+  margin: 5px;
+  }  
+  button:hover{
+    background-color:#F58B6F;
+}
+/* main */
+main {
+  margin: 0 auto;
+  width: 50%;
+  padding-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+font-family: 'Courier New', Courier, monospace
+  
+}
+.devan {
+  max-width:75%;
+  border: solid 5px #F58B6F;
+}
+p {
+  max-width:500px;
+  line-height:1.9;
 }
