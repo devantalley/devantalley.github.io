@@ -265,7 +265,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-font-family: 'Courier New', Courier, monospace
+font-family: 'Courier New', Courier, monospace;
   
 }
 .devan {
@@ -282,125 +282,105 @@ h1 {
   text-transform: uppercase;
 }
 /* Gallery */
-body, html {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
+.container {
+  margin-top: 10px;
+  background-color: #8acda4;
 
-.gallery {
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  display: block;
-  margin: 0;
-  padding: 0;
-  position: relative;
 }
-
-.imgWrap {
-  cursor:pointer;
-  float: left;
-  width: 20%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  -webkit-transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -o-transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.imgWrap:last-child {
-  float: left;
-}
-
-.current {
-  width: 36%;
-  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-     -moz-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-       -o-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.notCurrent {
-  width: 16%;
-  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-     -moz-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-       -o-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.current-full {
-  width: 100%;
-  -webkit-transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -o-transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+section .gallery {
+    overflow-x: hidden;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+    font-size: 14px;
 }
 
 
+.col-pic{
+    position:absolute;
+    top:0;
+    color: #fff;
+    width:100%;
+    height:100%;
+    text-align: left; 
+    background: rgba(0, 0, 0, 0.2);
+}
+.col-pic h5{
+    color:#fff;
+    margin-left: 40px;
+    font-size: 2em;
+    text-transform:uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+.col-pic p {
+  color:#fff;
+  text-transform: lowercase;
+  margin-left: 40px;
+  font-size: 20px;
 
-.current-full .full-content {
-  visibility: visible;
+}
+.col-3{
+    position:relative;
+    margin-bottom:1.5em;
+    z-index: 0;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 2.2s ease-in-out;
+    -moz-transition: all 2.2s ease-in-out;
+    -ms-transition: all 2.2s ease-in-out;
+    -o-transition: all 2.2s ease-in-out;
+    transition: all 2.2s ease-in-out;
+
+}
+.col-3 a img
+{
+    -webkit-transition: all 2.4s ease-in-out;
+    -moz-transition: all 2.4s ease-in-out;
+    -ms-transition: all 2.4s ease-in-out;
+    -o-transition: all 2.4s ease-in-out;
+    transition: all 2.4s ease-in-out;
+    max-width:50%;
+    max-height: 50%;
+    display: block;
+    margin: 0 auto;
+ 
 }
 
-.full-content {
-  visibility: hidden;
-  background: rgba(0, 0, 0, 0.6);
-  height: 100%;
-  width: 100%;
+.col-3 a
+{
+    display: block;
+    overflow: hidden;
+    position: relative;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
-.notCurrent-full {
-  width: 0%;
-  -webkit-transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -o-transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+.col-3 a:hover img
+{
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+}
+.col-3:hover .col-pic
+{
+    background:rgba(0, 0, 0, 0.59);
 }
 
-/******************************
-Image Gallery
-******************************/
-.images ul li {
-  float: left;
-  width: 150px;
-  height: 125px;
-  list-style: none;
-  margin: 40px 40px 40px 40px;
-  opacity: 1;
-  box-shadow: #000 0px 0px 5px 0px;
-  -webkit-animation: scale 3s ease-in-out infinite alternate;
+.padcol {
+    padding-left:1px;
+    padding-right:2px;
+    margin-top: -17px;
 }
-
-.images ul li:hover {
-  opacity: 1.0;
-}
-
-/******************************
-Button Close
-******************************/
-.current-full .close {
-  visibility:visible;
-}
-
-
-.close {
-width: 44px;
-height: 44px;
-line-height: 44px;
-position: absolute;
-right: 0;
-top: 0;
-text-decoration: none;
-text-align: center;
-opacity: 0.65;
-padding: 0 0 18px 10px;
-color: white;
-font-style: normal;
-font-size: 28px;
-font-family: Arial, Baskerville, monospace;
+.margright
+{
+    margin-right: -2px;
 }
